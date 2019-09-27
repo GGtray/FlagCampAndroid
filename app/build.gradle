@@ -1,0 +1,70 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.example.flagcamp"
+        minSdkVersion 26
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    // Firebase authentication
+    implementation 'com.google.firebase:firebase-auth:16.0.5'
+    implementation 'com.google.android.gms:play-services-auth:17.0.0'
+    implementation 'com.google.firebase:firebase-database:16.0.4'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.github.ittianyu:BottomNavigationViewEx:2.0.4'
+
+    // Custom google sign in button
+    implementation 'com.shobhitpuri.custombuttons:google-signin:1.0.0'
+
+    // Facebook login
+    implementation 'com.facebook.android:facebook-login:[5,6)'
+
+    // CardStackView
+    implementation 'com.github.yuyakaido:CardStackView:2.3.4'
+
+    // jsoup
+    implementation 'org.jsoup:jsoup:1.12.1'
+
+    // Picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    // EasyPermissions
+    implementation 'pub.devrel:easypermissions:3.0.0'
+
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+
+    // CircularImageView
+    implementation 'com.mikhaellopez:circularimageview:4.0.2'
+
+    // ExpandableTextView
+    implementation 'com.ms-square:expandableTextView:0.1.4'
+
+    // PlacesAutocompleteTextView
+    implementation 'com.seatgeek:placesautocomplete:0.3-SNAPSHOT'
+}
+apply plugin: 'com.google.gms.google-services'  // Google Play services Gradle plugin
+
